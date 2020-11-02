@@ -4,6 +4,8 @@ Image analysis scripts used in 'Single-cell sequencing of the human midbrain rev
 
 ## General workflow
 The 'OligoAstroMicroAnalysis.m' is used to extract fluorescent objects (oligodendrocytes-PLP1, astrocytes-GFAP, microglia-IBA1) according to the intensity and area size.
+
 The 'MicrogliaRamificationAnalysis.m' extracts the fluorescent objects (microglia-IBA1) according to the intensity and area size. Furthermore, on each object, skeleton of the IBA1 mask was generated with a thinning function to identify the branching of the object areas. 
-The '
+
+The 'Neuron_seg_log.m' uses the function 'ImageAnalysis_Neuron_seg.m' to segment the neurons in the images. 
 
