@@ -1,6 +1,6 @@
 clc
 clear
-% Specify the folder where the files live.
+% Specify the input folder
 inputFolder = '...';
 outputFolder = ['...', datestr(now, 'yyyymmdd_HHMMSS')];
 mkdir(outputFolder)
@@ -17,7 +17,7 @@ currentfile = strcat(FileNameAndLocation, '.m');
 copyfile(currentfile,newbackup); 
 f_LogDependencies(FileNameShort, MainPath); 
 
-% Check to make sure that folder actually exists.  Warn user if it doesn't.
+% Check to make sure that folder is created
 if ~isfolder(inputFolder)
     errorMessage = sprintf('Error: The following folder does not exist:\n%s\nPlease specify a new folder.', inputFolder);
     uiwait(warndlg(errorMessage));
